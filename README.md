@@ -43,3 +43,4 @@ The project is divided into the following components:
 - Adding an address to the blacklist requires the user to sign a message in format ```Keccak256("Authorize-{unix_timestamp}-{address_to_blacklist}")``` to avoid calling endpoint without having deployer private key and to avoid MITM/replay attack. The signature is valid for 60 seconds.
 - The frontend is attempting to render NFT images from IPFS, but since the images are likely hosted only on my IPFS node, it will render them from the local file system. Timeout for IPFS render is 2 seconds.
 - Metamask's signature is Ethereum signature, go-ethereum's signature is ECDSA signature, so i used different package to verify signature on backend side to avoid manually creating Ethereum specific signature.
+- The frontend should be further modularized to enhance both readability and maintainability. Fortunately, it's likely that no one will need to revisit it again.
